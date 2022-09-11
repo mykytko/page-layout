@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,12 +9,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot/index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot/img/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot/css/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot/css/" />
+    <Folder Include="wwwroot/js/" />
+    <Folder Include="wwwroot/img/" />
   </ItemGroup>
 
 </Project>
